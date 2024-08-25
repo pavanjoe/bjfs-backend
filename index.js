@@ -2,12 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
-const port = 3000;
 
 app.use(bodyParser.json());
 app.use(cors());
-
-
 
 const userId = "john_doe_17091999";  // Replace with your own
 
@@ -42,6 +39,8 @@ app.get('/bfhl', (req, res) => {
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+
+// Export handler for Vercel
+module.exports = (req, res) => {
+  app(req, res);
+};
