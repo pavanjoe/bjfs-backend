@@ -6,9 +6,7 @@ const port = 3000;
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(cors({
-  origin: 'https://bjfs-frontend.vercel.app/'  // or your frontend's URL
-}));
+
 
 
 const userId = "john_doe_17091999";  // Replace with your own
