@@ -40,7 +40,8 @@ app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
 
-// Export handler for Vercel
-module.exports = (req, res) => {
-  app(req, res);
-};
+// Start the server
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

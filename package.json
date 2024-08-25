@@ -1,7 +1,7 @@
 {
   "name": "my-backend",
   "version": "1.0.0",
-  "description": "A backend API deployed on Vercel",
+  "description": "A backend API",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
